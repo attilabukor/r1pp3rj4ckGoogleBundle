@@ -1,0 +1,28 @@
+{
+    "name": "r1pp3rj4ck/google-bundle",
+    "type": "symfony-bundle",
+    "description": "Bundle for Google services",
+    "keywords": ["google", "calendar", "maps"],
+    "version": "1.0.0-dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "r1pp3rj4ck",
+            "email": "attila.bukor@gmail.com",
+            "homepage": "http://r1pp3rj4ck.wordpress.com",
+            "role": "Developer, Maintainer"
+        }
+    ],
+    "require": {
+        "symfony/symfony": ">=2.1"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": { "r1pp3rj4ck\\GoogleBundle": "" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.0-dev"
+        }
+    }
+}

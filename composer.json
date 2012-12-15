@@ -14,12 +14,14 @@
         }
     ],
     "require": {
-        "symfony/symfony": ">=2.1"
+        "symfony/symfony": ">=2.1",
+        "evert/google-api-php-client": "dev-master"
     },
     "minimum-stability": "dev",
     "autoload": {
         "psr-0": { "r1pp3rj4ck\\GoogleBundle": "" }
     },
+    "target-dir": "r1pp3rj4ck/GoogleBundle",
     "extra": {
         "branch-alias": {
             "dev-master": "1.0.0-dev"

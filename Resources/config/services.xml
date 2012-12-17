@@ -5,5 +5,24 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
      <services>
+         <service id="r1pp3rj4ck_google.api_client" abstract="true" class="r1pp3rj4ck\GoogleBundle\Service\ApiClient">
+             <argument>%r1pp3rj4ck_google.app_name%</argument>
+             <argument>%r1pp3rj4ck_google.client_id%</argument>
+             <argument>%r1pp3rj4ck_google.client_secret%</argument>
+             <argument>%r1pp3rj4ck_google.developer_key%</argument>
+             <argument type="service" id="router"/>
+             <argument>%r1pp3rj4ck_google.route_name%</argument>
+             <argument type="collection">%r1pp3rj4ck_google.route_params%</argument>
+         </service>
+
+         <service id="r1pp3rj4ck_google.calendar" class="r1pp3rj4ck\GoogleBundle\Service\Calendar">
+             <argument>%r1pp3rj4ck_google.app_name%</argument>
+             <argument>%r1pp3rj4ck_google.client_id%</argument>
+             <argument>%r1pp3rj4ck_google.client_secret%</argument>
+             <argument>%r1pp3rj4ck_google.developer_key%</argument>
+             <argument type="service" id="router"/>
+             <argument>%r1pp3rj4ck_google.route_name%</argument>
+             <argument type="collection">%r1pp3rj4ck_google.route_params%</argument>
+         </service>
      </services>
 </container>

@@ -1,6 +1,6 @@
 <?php
 
-namespace r1pp3rj4ck\GoogleBundle\Service;
+namespace r1pp3rj4ck\GoogleBundle\Client;
 
 use GoogleApi\Client,
     GoogleApi\Auth\AssertionCredentials;

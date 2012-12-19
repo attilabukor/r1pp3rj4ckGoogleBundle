@@ -102,12 +102,7 @@ class Calendar extends ApiClient
         if (is_array($event) || $event instanceof GoogleEvent) {
             $event = new Event($event);
         }
-        try {
-            $event = $this->calendar->events->update($calendarId, $eventId, $event->getEvent(), $optParams);
-        } catch (\Exception $e) {
-            var_dump($event->getEvent());
-            die();
-        }
+        $event = $this->calendar->events->update($calendarId, $eventId, $event->getEvent(), $optParams);
         if (!$event) {
             throw new \Exception('Event has failed to be updated');
         } else {

@@ -47,8 +47,10 @@ class Calendar extends ApiClient
         }
         $googleEvents = $this->calendar->events->listEvents($calendarId, $optParams);
         $events = array();
-        foreach ($googleEvents['items'] as $event) {
-            $events[] = new Event($event);
+        if (array_key_exists('items', $googleEvents)) {
+            foreach ($googleEvents['items'] as $event) {
+                $events[] = new Event($event);
+            }
         }
         return $events;
     }

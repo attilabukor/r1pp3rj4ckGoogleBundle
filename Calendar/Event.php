@@ -52,7 +52,7 @@ class Event
     public function getStart()
     {
         $start = $this->googleEvent->getStart();
-        return new \DateTime($start['dateTime']);
+        return array_key_exists('dateTime', $start) ? new \DateTime($start['dateTime']) : new \DateTime($start['date']);
     }
 
     public function setEnd(\DateTime $end)
@@ -68,7 +68,7 @@ class Event
     public function getEnd()
     {
         $end = $this->googleEvent->getEnd();
-        return new \DateTime($end['dateTime']);
+        return array_key_exists('dateTime', $end) ? new \DateTime($end['dateTime']) : new \DateTime($end['date']);
     }
 
     public function setSummary($summary)
